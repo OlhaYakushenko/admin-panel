@@ -1,0 +1,138 @@
+.menu{
+    
+    &__list{
+        list-style-type:none;
+        width: 250px;
+        margin: 0;
+        padding: 0;
+    }
+   
+    &__item{
+        width: 250px;
+        margin-bottom: 18px;
+        transition: .5s all;
+        border-radius: 8px;
+        &_active, &:hover{
+            background: #5932ea;
+           
+           .menu__icon{
+            
+            svg path{
+                stroke: white ;
+                           }
+           }
+           .menu__text{
+             color: #fff;
+           }
+
+        .icon-product, .icon-question, .icon-promote{
+            &:before{ 
+                color: #fff;
+            }
+        }
+        }
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        padding: 11px 8px 11px 11px;
+    
+        position: relative;
+        
+    }
+    &__icon{
+        width: 24px;
+        height: 24px;
+        margin-right: 14px;
+        position: relative;
+
+    }
+    &__text{
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: -0.01em;
+        color: #9197b3;
+    }
+
+    .has-sub{
+        .menu__link{
+            &:after{
+                content: '\f105';
+                font-family: 'fontello';
+                font-style: normal;
+                font-weight: normal;
+                position: absolute;
+                right: 12px;
+                font-size: 16px;
+                color:#9197B3;
+            }
+          
+        }
+        &:hover, &:active{
+            .menu__link{
+                &:after{color:#fff;}
+            }
+        }
+
+    }
+    .has-sub.menu__item_active{
+        .menu__link::after{
+            color:#fff;
+        }
+        .icon-product, .icon-question, .icon-promote{
+            &:before{ 
+                color: #fff;
+            }
+        }
+    }
+}
+
+.icon-product, .icon-question, .icon-promote{
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    
+    &::before{
+        position: absolute;
+        top: -5px;
+        color: #9197b3;
+    }
+}
+
+
+.icon-product::before{
+    content: '\e804';
+
+}
+.icon-question:before{
+    content: '\e805';
+}
+.icon-promote:before{
+    content: '\e806';
+}
+
+.hamburger{
+        display: none;
+         position: absolute;
+         left: 0;
+         top: 16px;
+        transform: translateY(-50%);
+        width: 26px;
+        height: 12px;
+        @media(max-width:1199px){
+            display: block;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+        span{
+            display: block;
+            height: 1px;
+            width: 100%;
+            background: #000;
+            margin-bottom: 6px;
+            transition: .5s all;
+        }
+        
+}

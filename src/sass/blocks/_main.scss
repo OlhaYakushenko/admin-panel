@@ -1,0 +1,27 @@
+.main{
+    background:#eee;
+    width: 100%;
+    padding: 41px 71px;
+    margin-left: 306px;
+    @media(max-width:1350px){
+        padding: 41px 40px;
+    }
+    @media(max-width:1199px){
+    margin-left: auto;
+    }
+    @media (max-width:767px){
+        padding: 20px 20px;
+    }
+    header{
+        position: relative;
+    }
+}
+
+.welcome{
+    font-weight: 500;
+    font-size: 24px;
+    color: #000;
+    @media(max-width:1199px){
+       text-align: right;
+    }
+}
